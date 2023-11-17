@@ -1,4 +1,4 @@
-import { CronService } from "../cron/cron-service";
+import { CronService } from "./cron/cron-service";
 import { CheckService } from "../domain/use-cases/checks/check-service";
 
 export class Server {
@@ -7,7 +7,7 @@ export class Server {
       new CheckService(
         () => console.log('Starting'),
         (error) => console.log(error)
-      ).execute("http://localhost:3000/posts");
+      ).execute("https://google.com");
     });
   }
 }
